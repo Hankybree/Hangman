@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hangmangtry5"
+        android:src="@drawable/hangmantry5"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/hangmanlogo" />
+
+    <Button
+        android:id="@+id/play_game_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hangmanbutton"
+        android:text="@string/play_game"
+        android:textColor="@color/button_text_color"
+        android:onClick="playGameButton"/>
+
+    <Button
+        android:id="@+id/about_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_game_button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hangmanbutton"
+        android:text="@string/about"
+        android:textColor="@color/button_text_color"
+        android:onClick="aboutButton"/>
+
+
+</RelativeLayout>

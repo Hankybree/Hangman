@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">Hangman</string>
+    <string name="about">About</string>
+    <string name="play_game">Play game</string>
+    <string name="about_text">Hello, I am Frank professional app developer! This game is awesome. Graphics in blender. Peace!</string>
+    <string name="back">Back</string>
+    <string name="guess_text">Guess</string>
+    <string name="guess_input">Guess a letter</string>
+    <string name="hidden_word_1">SHEEP</string>
+    <string name="hidden_word_2">DOG</string>
+    <string name="hidden_word_3">CAT</string>
+    <string name="hidden_word_4">CAMEL</string>
+    <string name="hidden_word_5">BEAR</string>
+    <string name="hidden_word_6">COW</string>
+    <string name="hidden_word_7">OTTER</string>
+    <string name="hidden_word_8">PIG</string>
+    <string name="hidden_word_9">HORSE</string>
+    <string name="hidden_word_10">PENGUIN</string>
+    <string name="logo">Hangman</string>
+    <string name="play_again_text">Play again</string>
+    <string name="main_menu_text">Main menu</string>
+    <string name="main_menu">Main menu</string>
+    <string name="english">English</string>
+    <string name="swedish">Swedish</string>
+</resources>
