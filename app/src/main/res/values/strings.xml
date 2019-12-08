@@ -2,7 +2,9 @@
     <string name="app_name" translatable="false">Hangman</string>
     <string name="about">About</string>
     <string name="play_game">Play game</string>
-    <string name="about_text">Hello, I am Frank professional app developer! This game is awesome. Graphics in blender. Peace!</string>
+    <string name="about_text">
+        In this amazing game you try to figure out what the hidden word is. You guess a letter and if you can find the word you win, but if you do too many incorrect guesses you lose!
+    </string>
     <string name="back">Back</string>
     <string name="guess_text">Guess</string>
     <string name="guess_input">Guess a letter</string>

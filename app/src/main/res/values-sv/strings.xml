@@ -3,7 +3,9 @@
     <string name="app_name">Hangman</string>
     <string name="about">Om</string>
     <string name="play_game">Spela</string>
-    <string name="about_text">Hej, jag är Frank den professionella utvecklaren! Detta spel är grymt. Grafiken är gjord i Blender. Fred!</string>
+    <string name="about_text">
+        I detta fantastiska spel så försöker du lista ut det hemliga ordet. Du gissar på en bokstav och om du kan hitta order vinner du, men om du gissar fel för många gånger förlorar du!
+    </string>
     <string name="back">Tillbaka</string>
     <string name="guess_text">Gissa</string>
     <string name="guess_input">Gissa på en bokstav</string>
