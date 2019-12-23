@@ -1,10 +1,12 @@
 package com.example.labb4;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,14 +24,12 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity
 {
-    private Random rnd;
     private int counter = 0;
 
     private ImageView[] tryImages = new ImageView[9];
     private String[] hiddenWords = new String[10];
 
     private String hiddenWord;
-    private String guessedLetter;
     private ArrayList<String> lettersGuessed;
 
     private EditText guessInput;
@@ -39,8 +39,8 @@ public class GameActivity extends AppCompatActivity
     private Button playAgainButton;
     private Button mainMenuButton;
 
-    ImageView youLose;
-    ImageView youWin;
+    private ImageView youLose;
+    private ImageView youWin;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -94,12 +94,10 @@ public class GameActivity extends AppCompatActivity
         printDisplayedWord();
     }
 
-    public void attempt(View view)
+    public void attempt(String guessedLetter)
     {
         boolean correctGuess = false;
         String wordToDisplay = "";
-
-        guessedLetter = guessInput.getText().toString().toUpperCase();
 
         if (!guessedLetter.equals(""))
         {
@@ -186,7 +184,8 @@ public class GameActivity extends AppCompatActivity
                         displayedWord.setText(hiddenWord);
                     }
 
-                    printGuessedLetters();
+                    //printGuessedLetters();
+                    // Sätt knappen till otryckbar och ändra färg
                 }
             }
             else
@@ -243,7 +242,7 @@ public class GameActivity extends AppCompatActivity
         youLose = findViewById(R.id.you_lose);
         youWin = findViewById(R.id.you_win);
 
-        rnd = new Random();
+        Random rnd = new Random();
         int randomWord = rnd.nextInt(10);
 
         hiddenWord = hiddenWords[randomWord];
@@ -317,7 +316,7 @@ public class GameActivity extends AppCompatActivity
         return letterGuessed;
     }
 
-    private void printGuessedLetters()
+    /*private void printGuessedLetters()
     {
         String strToPrint = "";
 
@@ -332,5 +331,213 @@ public class GameActivity extends AppCompatActivity
         TextView lettersGuessed = findViewById(R.id.guessed_letters);
 
         lettersGuessed.setText(strToPrint);
+    }*/
+
+    public void guessA(View view) {
+        attempt("A");
+
+        Button button = findViewById(R.id.guess_a_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessB(View view) {
+        attempt("B");
+
+        Button button = findViewById(R.id.guess_b_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessC(View view) {
+        attempt("C");
+
+        Button button = findViewById(R.id.guess_c_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessD(View view) {
+        attempt("D");
+
+        Button button = findViewById(R.id.guess_d_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessE(View view) {
+        attempt("E");
+
+        Button button = findViewById(R.id.guess_e_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessF(View view) {
+        attempt("F");
+
+        Button button = findViewById(R.id.guess_f_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessG(View view) {
+        attempt("G");
+
+        Button button = findViewById(R.id.guess_g_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessH(View view) {
+        attempt("H");
+
+        Button button = findViewById(R.id.guess_h_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessI(View view) {
+        attempt("I");
+
+        Button button = findViewById(R.id.guess_i_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessJ(View view) {
+        attempt("J");
+
+        Button button = findViewById(R.id.guess_j_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessK(View view) {
+        attempt("K");
+
+        Button button = findViewById(R.id.guess_k_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessL(View view) {
+        attempt("L");
+
+        Button button = findViewById(R.id.guess_l_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessM(View view) {
+        attempt("M");
+
+        Button button = findViewById(R.id.guess_m_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessN(View view) {
+        attempt("N");
+
+        Button button = findViewById(R.id.guess_n_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessO(View view) {
+        attempt("O");
+
+        Button button = findViewById(R.id.guess_o_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessP(View view) {
+        attempt("P");
+
+        Button button = findViewById(R.id.guess_p_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessQ(View view) {
+        attempt("Q");
+
+        Button button = findViewById(R.id.guess_q_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessR(View view) {
+        attempt("R");
+
+        Button button = findViewById(R.id.guess_r_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessS(View view) {
+        attempt("S");
+
+        Button button = findViewById(R.id.guess_s_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessT(View view) {
+        attempt("T");
+
+        Button button = findViewById(R.id.guess_t_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessU(View view) {
+        attempt("U");
+
+        Button button = findViewById(R.id.guess_u_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessV(View view) {
+        attempt("V");
+
+        Button button = findViewById(R.id.guess_v_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessW(View view) {
+        attempt("W");
+
+        Button button = findViewById(R.id.guess_w_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessX(View view) {
+        attempt("X");
+
+        Button button = findViewById(R.id.guess_x_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessY(View view) {
+        attempt("Y");
+
+        Button button = findViewById(R.id.guess_y_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
+    }
+
+    public void guessZ(View view) {
+        attempt("Z");
+
+        Button button = findViewById(R.id.guess_z_button);
+        int color = getResources().getColor(R.color.button_used_color);
+        button.setBackgroundColor(color);
     }
 }

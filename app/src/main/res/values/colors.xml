@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="button_text_color">#FFFFFF</color>
     <color name="action_title_color">#FFFFFF</color>
+    <color name="button_used_color">#636262</color>
 </resources>

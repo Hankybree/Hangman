@@ -117,40 +117,13 @@
         android:text=""/>
 
     <Button
-        android:id="@+id/guess_button"
-        android:text="@string/guess_text"
-        android:textColor="@color/button_text_color"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="137dp"
-        android:layout_height="65dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/hangmanbutton"
-        android:onClick="attempt"
-        android:visibility="visible" />
-
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/guess_input"
-        android:layout_toLeftOf="@+id/guess_button"
-        android:layout_alignBottom="@+id/guess_button"
-        android:hint="@string/guess_input"
-        android:maxLength="1"
-        android:text=""
-        android:textAlignment="center"
-        android:visibility="visible" />
-
-    <Button
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:id="@+id/play_again_button"
         android:text="@string/play_again_text"
         android:background="@drawable/hangmanbutton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@+id/hidden_word"
+        android:layout_above="@+id/hidden_word"
         android:textColor="@color/button_text_color"
         android:onClick="playAgain"
         android:visibility="invisible"/>
@@ -162,8 +135,9 @@
         android:text="@string/main_menu_text"
         android:background="@drawable/hangmanbutton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@+id/hidden_word"
+        android:layout_above="@+id/hidden_word"
         android:layout_toRightOf="@+id/play_again_button"
+        android:layout_toEndOf="@+id/play_again_button"
         android:textColor="@color/button_text_color"
         android:onClick="mainMenu"
         android:visibility="invisible"/>
@@ -173,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_above="@+id/main_menu_button"
         android:src="@drawable/hangmanyouwin"
         android:visibility="invisible"/>
 
@@ -182,8 +156,380 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_above="@id/main_menu_button"
         android:src="@drawable/hangmanlose"
         android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/guess_button"
+        android:text="@string/guess_text"
+        android:textColor="@color/button_text_color"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="137dp"
+        android:layout_height="65dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/hangmanbutton"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/guess_input"
+        android:layout_toLeftOf="@+id/guess_button"
+        android:layout_alignBottom="@+id/guess_button"
+        android:hint="@string/guess_input"
+        android:maxLength="1"
+        android:text=""
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/button_row_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_row_2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp">
+
+        <Button
+            android:id="@+id/guess_a_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/a"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessA"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_b_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessB"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_c_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/c"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessC"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_d_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/d"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessD"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_e_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/e"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessE"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_f_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/f"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessF"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_g_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/g"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessG"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_h_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/h"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessH"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_i_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/i"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessI"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_row_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_row_3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/guess_j_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/j"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessJ"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_k_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/k"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessK"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_l_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/l"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessL"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_m_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessM"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_n_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/n"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessN"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_o_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/o"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessO"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_p_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/p"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessP"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_q_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/q"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessQ"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_row_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/guess_r_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/r"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessR"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_s_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/s"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessS"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_t_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/t"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessT"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_u_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/u"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessU"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_v_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/v"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessV"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_w_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/w"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessW"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_x_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/x"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessX"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_y_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/y"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessY"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/guess_z_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/z"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/button_text_color"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="guessZ"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </RelativeLayout>

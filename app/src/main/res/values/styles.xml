@@ -10,7 +10,7 @@
         <item name="titleTextStyle">@style/ActionBarTextStyle</item>
     </style>
 
-    <style name="ActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="actionBarStyle">@style/MyActionBar</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
