@@ -1,12 +1,10 @@
 package com.example.labb4;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -183,9 +181,6 @@ public class GameActivity extends AppCompatActivity
 
                         displayedWord.setText(hiddenWord);
                     }
-
-                    //printGuessedLetters();
-                    // Sätt knappen till otryckbar och ändra färg
                 }
             }
             else
@@ -315,23 +310,6 @@ public class GameActivity extends AppCompatActivity
 
         return letterGuessed;
     }
-
-    /*private void printGuessedLetters()
-    {
-        String strToPrint = "";
-
-        for(int i = 0; i < lettersGuessed.size(); i++)
-        {
-            if (!hiddenWord.contains(lettersGuessed.get(i)))
-            {
-                strToPrint += lettersGuessed.get(i) + " ";
-            }
-        }
-
-        TextView lettersGuessed = findViewById(R.id.guessed_letters);
-
-        lettersGuessed.setText(strToPrint);
-    }*/
 
     public void guessA(View view) {
         attempt("A");

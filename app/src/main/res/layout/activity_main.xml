@@ -33,6 +33,4 @@
         android:text="@string/play_game"
         android:textColor="@color/button_text_color"
         android:onClick="playGameButton"/>
-
-
 </RelativeLayout>
