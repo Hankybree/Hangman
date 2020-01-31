@@ -543,7 +543,7 @@
         android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-6927854487345181/4140248696">
     </com.google.android.gms.ads.AdView>
 
     <com.google.android.gms.ads.AdView
@@ -554,7 +554,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-6927854487345181/2471943806">
     </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
