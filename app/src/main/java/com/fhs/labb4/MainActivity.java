@@ -1,4 +1,4 @@
-package com.example.labb4;
+package com.fhs.labb4;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class AboutActivity extends AppCompatActivity
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
+public class MainActivity extends AppCompatActivity
 {
+    private AdView mAdView;
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -56,11 +61,30 @@ public class AboutActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, "ca-app-pub-6927854487345181~4064750163");
+
+        mAdView = findViewById(R.id.ad_view);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
-    public void backButton(View view)
+    public void playGameButton(View view)
     {
-        finish();
+        Intent gameIntent = new Intent(this, GameActivity.class);
+
+        gameIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(gameIntent);
+    }
+
+    public void aboutButton(View view)
+    {
+        Intent aboutIntent = new Intent(this, AboutActivity.class);
+
+        aboutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(aboutIntent);
     }
 }

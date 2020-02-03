@@ -1,4 +1,4 @@
-package com.example.labb4;
+package com.fhs.labb4;
 
 import android.content.Context;
 

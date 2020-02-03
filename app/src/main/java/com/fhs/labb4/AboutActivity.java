@@ -1,27 +1,16 @@
-package com.example.labb4;
+package com.fhs.labb4;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
-public class MainActivity extends AppCompatActivity
+public class AboutActivity extends AppCompatActivity
 {
-    private AdView mAdView;
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -67,30 +56,11 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        MobileAds.initialize(this, "ca-app-pub-6927854487345181~4064750163");
-
-        mAdView = findViewById(R.id.ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        setContentView(R.layout.activity_about);
     }
 
-    public void playGameButton(View view)
+    public void backButton(View view)
     {
-        Intent gameIntent = new Intent(this, GameActivity.class);
-
-        gameIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        startActivity(gameIntent);
-    }
-
-    public void aboutButton(View view)
-    {
-        Intent aboutIntent = new Intent(this, AboutActivity.class);
-
-        aboutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        startActivity(aboutIntent);
+        finish();
     }
 }
